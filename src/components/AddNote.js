@@ -17,21 +17,18 @@ const AddNote = (props) => {
     return (
         <div>
             <div className="container my-4">
-                <h1>Add notes</h1>
+                <h1 className="my-3 py-3">Add notes</h1>
                 <form className="my-3">
-                    <div className="mb-3">
-                        <label htmlFor="title" className="form-label">Title</label>
-                        <input type="text" className="form-control" id="title" name="title"aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required/>
+                    <div className="my-3">
+                        <input type="text" className="form-control addinput py-3" id="title" name="title"aria-describedby="emailHelp" placeholder="Title of the Note" value={note.title} onChange={onChange} minLength={5} required/>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="description" className="form-label">Description</label>
-                        <input type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange} minLength={5} required/>
+                    <div className="my-3">
+                        <input type="text" className="form-control addinput py-3" id="description" name="description" placeholder="Describe Your Note" value={note.description} onChange={onChange} minLength={5} required/>
                     </div>
-                    <div className="mb-4">
-                        <label htmlFor="tag" className="form-label">Tag</label>
-                        <input type="text" className="form-control" id="tag" name="tag" value={note.tag} onChange={onChange}/>
+                    <div className="my-3">
+                        <input type="text" className="form-control addinput py-3" id="tag" name="tag" placeholder="Place your note under a tag" value={note.tag} onChange={onChange}/>
                     </div>
-                    <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleAddNote}>Add Note</button>
+                    <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary mt-3 mx-2 btn-lg" onClick={handleAddNote}>Add Note</button>
                 </form>
             </div>
         </div>

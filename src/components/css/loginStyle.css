@@ -1,0 +1,16 @@
+body{
+    background: url("../assets/kelly-sikkema-0iKjge_aOVo-unsplash.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+
+.container h1{
+    color: #fff;
+}
+
+.icon{
+    color: #fff;
+}
+
+.card{
+    border-radius: 25px;
+}
